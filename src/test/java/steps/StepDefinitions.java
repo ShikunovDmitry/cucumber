@@ -46,7 +46,7 @@ public class StepDefinitions {
 
         properties.load(new FileInputStream("src/test/resources/project.properties"));
         log.info("Opening " + properties.getProperty("siteUrl"));
-        log.info("Run test in " + "Chrome");
+        log.info("Run test in ");
         WebDriverRunner.getDriver().get(properties.getProperty("siteUrl"));
         WebDriverRunner.getDriver().manage().window().maximize();
     }

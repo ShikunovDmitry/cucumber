@@ -1,11 +1,7 @@
 package utils;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,7 +11,9 @@ public class WebDriverRunner {
     private static final String serverURL = "http://192.168.100.18:4444/wd/hub";
 
     public static void initDriver() throws MalformedURLException {
-    driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+        System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe");
+    driver = new FirefoxDriver();
  //       driver = new RemoteWebDriver(new URL(serverURL), new FirefoxOptions());
     }
 
