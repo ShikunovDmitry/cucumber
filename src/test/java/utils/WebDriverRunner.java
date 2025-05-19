@@ -14,8 +14,9 @@ public class WebDriverRunner {
     public static void initDriver() throws MalformedURLException {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe");
+        driver = new ChromeDriver();
 //    driver = new FirefoxDriver();
-        driver = new RemoteWebDriver(new URL(serverURL), new FirefoxOptions());
+        // driver = new RemoteWebDriver(new URL(serverURL), new FirefoxOptions());
     }
 
     public static WebDriver getDriver() {
